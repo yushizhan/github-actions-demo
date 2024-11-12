@@ -1,0 +1,16 @@
+name: iOS Build
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: self-hosted  # 指定使用自托管运行器
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Select Xcode
+      run: |
+        echo `pwd`
